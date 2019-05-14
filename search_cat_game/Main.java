@@ -1,7 +1,7 @@
 package cat;
 
 /**
- * @author yamasaki
+ * @author ronrole
  * 量子猫のクイズ
  * 最初の箱のどこかに猫が入る
  * ->毎回1つとなりに移動する
