@@ -61,7 +61,7 @@ public class Exchange {
 			}
 		}
 
-		System.out.println(pattern);
+		System.out.println("支払方法:" + pattern + "通り");
 		System.out.println(maisuu_result);
 		for(boolean[] dp_outer : dp) {
 			for(boolean dp_inner : dp_outer) {
