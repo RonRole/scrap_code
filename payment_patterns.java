@@ -13,6 +13,7 @@ public class Exchange {
 		 */
 		int shiharai = sc.nextInt();
 		int[] coins = new int[] {1,100,500};
+		Arrays.sort(coins);
 		StringBuilder dp_panel = new StringBuilder();
 		StringBuilder maisuu_result = new StringBuilder();
 		sc.close();
