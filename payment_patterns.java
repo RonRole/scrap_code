@@ -12,7 +12,7 @@ public class Exchange {
 		 * 入力金額の支払い方法のパターン数
 		 */
 		int shiharai = sc.nextInt();
-		int[] coins = new int[] {1,5,10,50,100,500};
+		int[] coins = new int[] {1,100,500};
 		StringBuilder dp_panel = new StringBuilder();
 		StringBuilder maisuu_result = new StringBuilder();
 		sc.close();
@@ -30,12 +30,19 @@ public class Exchange {
 		 * dp[m][n]について、dp[m-1][*]に[n-1][n-5][n-10][n-50][n-100][n-500]のいずれかがあればtrue
 		 * 最終的にdp[*][n] = trueであるものを数える
 		 */
+		 
+		 //最小のコインで割り切れない場合、支払えない
+		 if(shiharai%coins[0] != 0){
+		     System.out.println("支払えません");
+		     return;
+		 }
 		//支払方法のパターン
 		int sizeOfDP = shiharai/coins[0]+1;
 		boolean dp[][] = new boolean[sizeOfDP][sizeOfDP];//[枚数][金額]
 
 		//初期化
 		dp[0][0] = true;
+		
 		/*
 		for(int i = 0; i < sizeOfDP; i++) {
 			dp_panel.append(i*coins[0]+"|");
@@ -63,12 +70,15 @@ public class Exchange {
 
 		System.out.println("支払方法:" + pattern + "通り");
 		System.out.println(maisuu_result);
+		
+		//*
 		for(boolean[] dp_outer : dp) {
 			for(boolean dp_inner : dp_outer) {
 				dp_panel.append(dp_inner ? "O|" : " |");
 			}
 			dp_panel.append("\r\n");
 		}
+		//*/
 
 		System.out.println(dp_panel);
 	}
