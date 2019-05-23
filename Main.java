@@ -9,8 +9,7 @@ public class Main {
 		String[] inputWords = sc.nextLine().split(" ");
 		sc.close();
 
-		Map<String,List<String>> map = Arrays.stream(inputWords)
-												.collect(Collectors.groupingBy(word -> word, LinkedHashMap::new, Collectors.toList()));
+		Map<String,List<String>> map = Arrays.stream(inputWords).collect(Collectors.groupingBy(word -> word, LinkedHashMap::new, Collectors.toList()));
 		map.forEach((key, value) -> System.out.println(key + " " + value.size()));
 	}
 }
