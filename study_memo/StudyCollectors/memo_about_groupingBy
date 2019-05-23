@@ -1,0 +1,9 @@
+Collectorsに関して
+
+Collectors#groupingByは、デフォルト(引数にFunctionひとつを持たせただけなど)では、
+戻り値がHashMapになる。
+
+キーの順序が重要であるなど、HashMap以外の実装を行いたい場合、引数を3つ要求するgroupingByメソッドを使用し、
+そこで戻り値となるMapの実装を指定する。
+
+例ではLinkedHashMapを用いている。
