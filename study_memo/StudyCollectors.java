@@ -3,7 +3,7 @@ package main;
 import java.util.*;
 import java.util.stream.*;
 
-public class Main {
+public class StudyCollectors {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String[] inputWords = sc.nextLine().split(" ");
