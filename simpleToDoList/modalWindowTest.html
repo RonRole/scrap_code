@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="shift_jis">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>ModalWindowTest</title>
+  </head>
+  <body>
+    <div class="modal" id = "modal">
+      <div class="modal-content">
+        <form class = "form-content" action = "#" name = "modalForm" method="post">
+          <input id = "title" type="text" name="title" value="title">
+          <textarea id = "content" name="content" value="content"></textarea>
+          <button id = "submit" type="submit" name="button" onclick="hideModal()">submit</button>
+        </form>
+      </div>
+    </div>
+    <button type="button" name="button" id="btn" onclick="showModal()">Click Me!</button>
+  <script type="text/javascript" src = "script.js"></script>
+  </body>
+</html>
