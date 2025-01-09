@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Web Audio APIサンプル</title>
+    </head>
+
+    <body>
+        <h2>Web Audio APIサンプル</h2>
+
+        <select name="type" id="type">
+            <option value="sine">正弦波</option>
+            <option value="square">矩形波</option>
+            <option value="sawtooth">ノコギリ波</option>
+            <option value="triangle">三角波</option>
+        </select>
+
+        <button id="play">再生</button>
+        <button id="stop">停止</button>
+        <br/>
+        <!-- 音量 -->
+        <label for="volume">音量</label>
+        <input type="range" name="volume" id="volumes" min="0" max="1" step="0.1" value="0.5">
+        <br/>
+        <!-- 周波数 -->
+        <label for="frequency">周波数</label>
+        <input type="range" name="frequency" id="frequency" min="100" max="1000" step="10" value="880">
+        <script src="./sample_audio.js"></script>
+    </body>
+</html>
