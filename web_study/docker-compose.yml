@@ -1,0 +1,9 @@
+services:
+  go:
+    image: golang:1.20-alpine
+    ports:
+      - 8080:8080
+    volumes:
+      - ./src:/go/src
+      - ./tiny_todo:/go/tiny_todo
+    tty: true

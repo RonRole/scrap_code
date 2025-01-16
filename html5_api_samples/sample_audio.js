@@ -39,6 +39,7 @@ class Audio {
             return;
         }
         this.#oscillator.stop();
+        this.#oscillator = null;
         this.#isPlaying = false;
     }
 }
@@ -64,8 +65,10 @@ document.getElementById("volumes").addEventListener("change", e => {
 
 document.getElementById("type").addEventListener("change", e => {
     properties.type = e.currentTarget.value;
+    audio.play(properties.type, properties.frequency);
 });
 
 document.getElementById("frequency").addEventListener("change", e => {
     properties.frequency = e.currentTarget.value;
+    audio.play(properties.type, properties.frequency);
 })
